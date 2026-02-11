@@ -1,0 +1,16 @@
+# Node.js
+node_modules/
+
+# Caddy server
+Caddyfile
+
+# Docker
+.env
+hostname
+
+# Projects
+projects/*
+localhost-certificates/
+
+# VSCode
+.vscode/

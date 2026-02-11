@@ -1,0 +1,11 @@
+localhost, $HOST.local {
+    root * /home/www
+    file_server browse
+    reverse_proxy /mqtt localhost:9001
+
+    header * {
+        Access-Control-Allow-Origin "*"
+        Access-Control-Allow-Methods "GET, POST, OPTIONS"
+    }
+}
+

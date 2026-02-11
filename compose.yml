@@ -1,0 +1,18 @@
+services:
+  vdev-server:
+    image : vdev-server:latest
+    container_name: vdev-server
+    stdin_open: true
+    tty: true
+
+    command: bash -c "chmod +x /home/config/run.sh && /home/config/run.sh"
+
+    volumes:
+      - ./projects:/home/www/projects
+      - ./config:/home/config
+    ports:
+      - "80:80"
+      - "443:443"
+      - "1883:1883"
+      - "9001:9001"
+
