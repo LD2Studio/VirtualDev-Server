@@ -6,11 +6,13 @@
 
 ![alt text](img/virtualdev.drawio.svg)
 
-**VirtualDev-Server** est un ensemble de composants logiciels qui regroupe la bibliothèque VirtualDev ainsi que tous les services logiciels nécessaires pour communiquer avec divers appareils (casque VR, objets connectés). 
+**VirtualDev-Server** est un ensemble de composants logiciels qui regroupe la bibliothèque VirtualDev ainsi que tous les services logiciels nécessaires pour communiquer avec divers appareils (casques VR/AR, objets connectés, caméra, etc).
+
+![alt text](img/virtualdev-server.drawio.svg)
 
 ## Comment utiliser VirtualDev-Server ?
 
-**VirtualDev-Server** est constitué de plusieurs outils logiciels nécessaires pour communiquer avec son environnement. On retrouve un serveur Web HTTPS (Caddy) pour servir vos pages Web, ainsi qu'un serveur MQTT (Mosquitto) pour dialoguer avec des objets connectés.
+**VirtualDev-Server** est constitué de plusieurs outils logiciels nécessaires pour communiquer avec son environnement. On retrouve un serveur Web HTTPS (Caddy) pour servir vos applications Web, ainsi qu'un serveur MQTT (Mosquitto) pour dialoguer avec des objets connectés (le serveur HTTPS sert de proxy au serveur MQTT).
 
 Pour faciliter l'installation de VirtualDev-Server sur sa machine, celui-ci est disponible sous forme d'une image Docker, qui sera lancée dans un conteneur sur sa propre machine.
 
