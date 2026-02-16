@@ -35,11 +35,34 @@ De plus, un éditeur de code est necessaire pour modifier le code source de votr
     ```
     - Pour télécharger le projet, cliquer sur le bouton vert (`<> Code`) sur la page du projet et télécharger le fichier ZIP. Dézipper le fichier.
 
-- Aller dans le dossier `VirtualDev-Server`, puis créer un sous-dossier nommé `projects`; vous placerez vos projets dans ce sous-dossier.
+- Depuis Visual Studio Code, ouvrir le dossier `VirtualDev-Server/`.
+
+L'arborescence du projet `VirtualDev-Server` est la suivante:
+
+```
+.
+├── compose.yml
+├── config
+│   ├── caddy
+│   │   └── Caddyfile.template
+│   ├── mosquitto.conf
+│   └── run.sh
+├── Dockerfile
+├── examples
+│   ├── ...
+│   └── ...
+├── package.json
+├── package-lock.json
+├── projects
+│   ├── ...
+│   └── ...
+└── README.md
+```
+> Important : Le sous-dossier nommé `projects` est l'endroit où vous devrez placer vos projets VirtualDev.
 
 ### Construire l'image de VirtualDev-Server
 
-L'image de VirtualDev-Server n'est pas fournie avec le projet VirtualDev-Server; il faut la construire sur sa machine.
+L'image de VirtualDev-Server n'est pas fournie avec le projet VirtualDev-Server : il faut la construire depuis sa machine.
 
 - Lancer **Visual Studio Code** et ouvrir le dossier `VirtualDev-Server/`.
 - Ouvrir un terminal dans Visual Studio Code (Menu `Terminal` > `Nouveau Terminal` ou le raccourci `CTRL+J`).
@@ -78,22 +101,18 @@ Maintenant que votre image est construite, vous pouvez lancer une instance de l'
 
 Pour pouvoir accéder au serveur VirtualDev depuis une machine extérieure (comme un navigateur d'un casque VR ou un objet connecté), il faut indiquer le nom de votre machine, appelé `HOSTNAME`.
 
-Le nom de votre machine est obtenu de différentes manières suivant votre système d'exploitation :
+1. Récupérer le nom de votre machine. Dans un terminal, taper la commande `hostname` qui affichera le nom de votre machine.
+2. Créer un fichier nommé `hostname` dans le sous-dossier `virtualdev-server/config`, puis éditer-le et saisir le nom de votre machine simplement.
 
-- Sous Linux, taper dans un terminal `hostname`,
-- Sous Windows, taper dans un invité de commande (cmd) `hostname`.
-- Sous MacOS, taper dans un terminal `hostname`.
+Quand vous lancez de nouveau votre serveur VirtualDev, celui-ci sera maintenant accessible en tapant l'adresse `<hostname>.local` dans le navigateur de la machine externe.
 
-- Créer un fichier nommé `hostname` dans le sous-dossier `virtualdev-server/config`, puis éditer le et saisir le nom de votre machine simplement.
+### Accès à la bibliothèque VirtualDev (facultatif)
 
-- Quand vous lancer de nouveau votre serveur VirtualDev, celui-ci sera maintenant accessible en tapant l'adresse `<hostname>.local` dans le navigateur de la machine externe.
+La bibliothèque VirtualDev utilisée dans ce projet, ainsi que leurs dépendances (Three.js, MQTT, etc.) sont disponibles dans l'image **vdev-server**, mais elles ne sont pas visibles depuis votre machine et l'éditeur **Visual Studio Code** ne peut pas y accéder pour la complétion de code et la documentation de VirtualDev.
 
-### Importation de bibliothèques JavaScript
-
-Les bibliothèques JavaScript utilisées dans ce projet (Three.js, MQTT, etc.) sont disponibles dans l'image **vdev-server**, mais elles ne sont pas visibles depuis votre machine et l'éditeur **Visual Studio Code** ne peut pas y accéder pour la complétion de code et la documentation de VirtualDev.
-
-Si vous souhaitez avoir une copie des bibliothèques, exécutez la commande suivante :
+Si vous souhaitez avoir une copie de ces bibliothèques, exécutez la commande suivante :
 
 ```bash
 docker cp vdev-server:/home/www/node_modules ./projects
 ```
+> **Avertissement** :  Cette commande ne fonctionne que si le conteneur `vdev-server` est lancé.
