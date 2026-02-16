@@ -4,6 +4,8 @@
 
 **VirtualDev** est un ensemble de bibliothèques JavaScript qui permet de développer des applications 3D immersives s'exécutant dans des navigateurs modernes.
 
+![alt text](img/virtualdev.drawio.svg)
+
 **VirtualDev-Server** est un ensemble de composants logiciels qui regroupe la bibliothèque VirtualDev ainsi que tous les services logiciels nécessaires pour communiquer avec divers appareils (casque VR, objets connectés). 
 
 ## Comment utiliser VirtualDev-Server ?
