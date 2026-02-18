@@ -8,7 +8,7 @@ RUN curl -qL https://www.npmjs.com/install.sh | sh
 
 WORKDIR /home/www
 RUN npm i mqtt three tweakpane
-RUN npm i git+https://github.com/LD2Studio/VirtualDev.git
+RUN npm i git+https://github.com/LD2Studio/VirtualDev.git#main
 
 COPY examples/ /home/www/examples
 
