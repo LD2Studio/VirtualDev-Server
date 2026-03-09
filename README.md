@@ -94,7 +94,8 @@ Maintenant que votre image est construite, vous pouvez lancer une instance de l'
 
 - Une page avec plusieurs dossiers apparaît. Le dossier `examples` contient plusieurs exemples de projet pour voir ce que l'on peut faire avec `VirtualDev-Server`. Le dossier `projects` permet de lancer vos projets locaux qui sont placés dans le dossier `virtualdev-server/projects`.
 
-- Pour stopper l'instance de VirtualDev-Server, saisir la commande suivante :
+- Pour stopper la machine virtuelle `VirtualDev-Server`, faire un CTRL+C dans le terminal.
+- Pour supprimer l'instance de `VirtualDev-Server`, saisir la commande suivante :
     ```bash
     docker compose down
     ```
