@@ -22,7 +22,7 @@ Pour pouvoir utiliser l'image Docker de VirtualDev-Server, vous devez avoir le l
 
 > Un excellent site pour apprendre à [Installer Docker sur Linux, Windows et macOS](https://blog.stephane-robert.info/docs/conteneurs/moteurs-conteneurs/docker/installation/).
 
-De plus, un éditeur de code est necessaire pour modifier le code source de votre projet (par exemple [Visual Studio Code](https://code.visualstudio.com/)).
+De plus, un éditeur de code est nécessaire pour modifier le code source de votre projet (par exemple [Visual Studio Code](https://code.visualstudio.com/)).
 
 > Astuce : Pour utiliser Visual Studio Code avec WSL sous Windows, cliquer sur ce [lien](https://learn.microsoft.com/fr-fr/windows/wsl/tutorials/wsl-vscode).
 
@@ -35,7 +35,7 @@ De plus, un éditeur de code est necessaire pour modifier le code source de votr
     - Pour cloner le projet, saisir la commande suivante dans un terminal:
 
     ```bash
-    git clone https://github.com/LD2Studio/VirtualDev-Server.git
+    git clone --depth=1 https://github.com/LD2Studio/VirtualDev-Server.git
     ```
     - Pour télécharger le projet, cliquer sur le bouton vert (`<> Code`) sur la page du projet et télécharger le fichier ZIP. Dézipper le fichier.
 
