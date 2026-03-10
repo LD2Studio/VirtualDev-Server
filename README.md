@@ -75,6 +75,12 @@ L'image de VirtualDev-Server n'est pas fournie avec le projet VirtualDev-Server 
     docker build -t vdev-server .
     ```
     > Ne pas oublier le `.` à la fin de la commande.
+
+    > Pour forcer la recompilation après une mise à jour de VirtualDev :
+
+    ```bash
+    docker build --build-arg REBUILD_VIRTUALDEV=$(date +%s) -t vdev-server .
+    ```
 - Vérifier que l'image de VirtualDev-Server a bien été construite.
 
     ```bash

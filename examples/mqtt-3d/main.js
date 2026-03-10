@@ -1,8 +1,8 @@
 import * as THREE from 'three';
-import VDEV from 'virtualdev';
+import * as VDEV from 'virtualdev';
 import mqtt from 'mqtt';
 
-const app = VDEV.init(THREE, {
+const app = new VDEV.App(THREE, null, {
     interactive: true
 });
 
