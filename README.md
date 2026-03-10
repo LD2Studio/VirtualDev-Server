@@ -64,37 +64,13 @@ L'arborescence du projet `VirtualDev-Server` est la suivante:
 ```
 > Important : Le sous-dossier nommé `projects` est l'endroit où vous devrez placer vos projets VirtualDev.
 
-### Construire l'image de VirtualDev-Server
-
-L'image de VirtualDev-Server n'est pas fournie avec le projet VirtualDev-Server : il faut la construire depuis sa machine.
-
-- Lancer **Visual Studio Code** et ouvrir le dossier `VirtualDev-Server/`.
-- Ouvrir un terminal dans Visual Studio Code (Menu `Terminal` > `Nouveau Terminal` ou le raccourci `CTRL+J`).
-- Dans le terminal, saisir la commande suivante pour construire l'image de VirtualDev-Server:
-    ```bash
-    docker build -t vdev-server .
-    ```
-    > Ne pas oublier le `.` à la fin de la commande.
-
-    > Pour forcer la recompilation après une mise à jour de VirtualDev :
-
-    ```bash
-    docker build --build-arg REBUILD_VIRTUALDEV=$(date +%s) -t vdev-server .
-    ```
-- Vérifier que l'image de VirtualDev-Server a bien été construite.
-
-    ```bash
-    docker images
-    ```
-    > Vous devriez voir l'image de VirtualDev-Server sous le nom `vdev-server`.
-
 ### Lancer VirtualDev-Server
 
-Maintenant que votre image est construite, vous pouvez lancer une instance de l'image de VirtualDev-Server (appelée *conteneur*).
+Vous êtes maintenant prêt à construire et à lancer une machine virtuelle `VirtualDev-Server`.
 
 - Dans le terminal, saisir la commande suivante:
     ```bash
-    docker compose up
+    docker compose up --build
     ```
 - Ouvrir un navigateur Web et saisir `localhost` dans la barre d'adresse.
 

@@ -1,7 +1,8 @@
 services:
-  vdev-server:
-    image : vdev-server:latest
-    container_name: vdev-server
+  container:
+    build: .
+    # image : vdev-server:latest
+    # container_name: server
     stdin_open: true
     tty: true
 
