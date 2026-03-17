@@ -1,6 +1,6 @@
 {
   "dependencies": {
     "mqtt": "^5.15.0",
-    "virtualdev": "github:LD2Studio/VirtualDev"
+    "virtualdev": "github:LD2Studio/VirtualDev#dev"
   }
 }

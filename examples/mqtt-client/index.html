@@ -3,19 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MQTT Client</title>
+    <title>MQTT 3D</title>
     <script type="importmap">
         {
             "imports": {
+                "three" : "../../node_modules/three/build/three.module.js",
+                "virtualdev" : "../../node_modules/virtualdev/dist/virtualdev.es.js",
+                "tweakpane" : "../../node_modules/tweakpane/dist/tweakpane.js",
                 "mqtt": "../../node_modules/mqtt/dist/mqtt.esm.js"
             }
         }
     </script>
     <script src="main.js" type="module"></script>
+    <style>
+        .overlay {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: #fff;
+            font-size: 12px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
 </head>
 <body>
-    <div id="connection-status"></div>
-    <div id="sub-status"></div>
-    <pre id="message"></pre>
+    <div class="overlay">
+        <pre></pre>
+    </div>
 </body>
 </html>
