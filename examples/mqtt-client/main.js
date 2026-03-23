@@ -55,7 +55,11 @@ client.on('message', (topic, message) => {
 /*
 Pour tester, saisir la commande suivante dans un terminal :
 
-docker exec vdev-server mosquitto_pub -t 'cube' -m '{"x":1, "y":0, "z":0}'
+$ docker exec vdev-server mosquitto_pub -t 'cube' -m '{"x":1, "y":0, "z":0}'
+
+Depuis une machine distante :
+
+$ mosquitto_pub -t 'cube' -m '{"x":1, "y":0, "z":0}' -h ergo-server.local
 
 */
 
