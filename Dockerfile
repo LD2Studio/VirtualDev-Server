@@ -21,6 +21,7 @@ CMD ["/bin/bash"]
 
 WORKDIR /home/www
 RUN bash -c "source $NVM_DIR/nvm.sh && npm install mqtt"
+ARG UPDATE_VDEV=1
 RUN bash -c "source $NVM_DIR/nvm.sh && npm install git+https://github.com/LD2Studio/VirtualDev.git#dev"
 
 COPY examples/ /home/www/examples
