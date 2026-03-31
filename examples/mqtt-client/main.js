@@ -40,7 +40,7 @@ client.on('connect', () => {
                 console.log(err);
             }
         });
-        overlay.textContent += `[MQTT] Subscribed to "${topic}" topic`;
+        overlay.textContent = `[MQTT] Subscribed to "${topic}" topic`;
     }
 });
 
